@@ -1,25 +1,23 @@
-name: Use Custom Action
+name: Use Custom Project Standardizer
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:
-  use_action:
+  standardize:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Run Custom Project Standardizer
-        id: format_step
+      - name: Run Project Standardizer
+        id: standardize
         uses: pradeepathirumurthi70-star/caj@v1
-
         with:
-          project-name: "My New Backend Service"
+          project-name: "My Backend Service"
 
-      - name: Print Custom Output
+      - name: Display Result
         run: |
-          echo "Action ran successfully."
-          echo "Formatted Output: ${{ steps.format_step.outputs.formatted-message }}"
+          echo "Action executed successfully!"
+          echo "Formatted Message: ${{ steps.standardize.outputs.formatted-message }}"
