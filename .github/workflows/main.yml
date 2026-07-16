@@ -2,6 +2,7 @@ name: Use Custom Project Standardizer
 
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   standardize:
