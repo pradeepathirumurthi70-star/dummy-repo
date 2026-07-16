@@ -14,7 +14,7 @@ jobs:
 
       - name: Run Project Standardizer
         id: standardize
-        uses: pradeepathirumurthi70-star/caj@main
+        uses: pradeepathirumurthi70-star/caj@master
         with:
           project-name: "My Backend Service"
 
