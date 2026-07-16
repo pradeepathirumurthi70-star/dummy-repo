@@ -14,7 +14,7 @@ jobs:
 
       - name: Run Custom Project Standardizer
         id: format_step
-        uses: your-username/custom-action-demo@v1
+        uses: pradeepathirumurthi70-star/caj@v1
 
         with:
           project-name: "My New Backend Service"
