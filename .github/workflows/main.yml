@@ -1,0 +1,25 @@
+name: Use Custom Action
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  use_action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Custom Project Standardizer
+        id: format_step
+        uses: your-username/custom-action-demo@v1
+
+        with:
+          project-name: "My New Backend Service"
+
+      - name: Print Custom Output
+        run: |
+          echo "Action ran successfully."
+          echo "Formatted Output: ${{ steps.format_step.outputs.formatted-message }}"
